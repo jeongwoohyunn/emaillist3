@@ -27,7 +27,7 @@
 			</tr>
 		</table>
 		<br>
-</c:forEach>
+</c:forEach> 
 	<p>
 		<a href="form.jsp">추가메일 등록</a>
 	</p>
