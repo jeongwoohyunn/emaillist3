@@ -13,25 +13,14 @@ import com.douzone.emaillist.vo.EmaillistVo;
 public class EmaillistController {
 
 	@Autowired //
-	private EmaillistDao emaillistDao;
-
-	/*
-	 * @ResponseBody
-	 * 
-	 * @RequestMapping("") public ModelAndView list() { ModelAndView mav = new
-	 * ModelAndView(); mav.addObject("list", emaillistDao.getList());
-	 * mav.setViewName("/WEB-INF/views/list.jsp");
-	 * 
-	 * return mav;
-	 */
-
+	private EmaillistDao emaillistDao; 
 	@RequestMapping("")
 	public String list(Model model) {
 		model.addAttribute("list", emaillistDao.getList());
 		return "/WEB-INF/views/list.jsp";
 	}
 
-	@RequestMapping("/form")
+	@RequestMapping("/form") 
 	public String form() {
 		return "/WEB-INF/views/form.jsp";
 	}
